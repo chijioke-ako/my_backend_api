@@ -10,9 +10,11 @@ const { Pool } = require('pg');
 //   idleTimeoutMillis: 30000,
 //   connectionTimeoutMillis: 2000,
 // });
+
 const pool = new Pool({
   connectionString: process.env.POSTGRES_URLB + '?sslmode=require',
 });
-module.exports = {
-  query: (text, params) => pool.query(text, params),
-};
+// module.exports = {
+//   query: (text, params) => pool.query(text, params),
+// };
+module.exports = pool;
