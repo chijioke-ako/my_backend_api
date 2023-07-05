@@ -6,7 +6,7 @@ const authenticate = require('../middleware/authoriztion');
 
 const bcrypt = require('bcryptjs');
 
-router.post('/', async (req, res) => {
+router.post('/', authenticate, async (req, res) => {
   const { firstname, lastname, email, role, password } = req.body;
 
   if (!firstname || !lastname || !email || !password)
