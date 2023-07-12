@@ -26,4 +26,8 @@ router.post('/', async (req, res) => {
   );
 });
 
+router.get('/', (req, res) => {
+  req.setEncoding('ok');
+});
+
 module.exports = router;
