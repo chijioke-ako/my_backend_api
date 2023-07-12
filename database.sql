@@ -1,5 +1,5 @@
 CREATE DATABASE teqbridgeltd;
-CREATE TABLE partners(
+CREATE TABLE partners (
     id BIGSERIAL NOT NULL,
     name VARCHAR(255) DEFAULT NULL,
     logo VARCHAR(255) NOT NULL,
@@ -58,7 +58,7 @@ CREATE TABLE resume(
 CREATE TABLE test(
     id BIGSERIAL NOT NULL,
     name VARCHAR(255) DEFAULT NULL,
-    age VARCHAR(255) DEFAULT NULL,
+    age VARCHAR(255) DEFAULT NULL
 );
 CREATE TYPE roles AS ENUM('user', 'admin');
 --    CREATE TABLE users (\dt
