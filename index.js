@@ -59,9 +59,11 @@ app.use('/api/publications', publicationRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/resume', resumeRouter);
 app.use('/api/register', signupRouter);
-// // app.use('/api/verify', verifyRouter);
-// app.use('/api/admin', adminRouter);
 app.use('/api/recap', recaptchaRouter);
+
+app.get('/', (req, res) => {
+  res.send('ok now is working');
+});
 
 app.listen(PORT, () => {
   console.log(`server listening on port ${PORT}`);
