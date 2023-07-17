@@ -47,20 +47,19 @@ router.get('/', async (req, res) => {
     return res.json({
       status: 'error',
     });
-    // console.error(err.message);
   }
 });
 //LIMIT 5 OFFSET 1
 
 // //get Partners
-router.get('/', async (req, res) => {
-  try {
-    const allPartners = await pool.query('SELECT *  FROM  partners LIMIT 5  ');
-    res.json(allPartners.rows);
-  } catch (err) {
-    console.error(err.message);
-  }
-});
+// router.get('/', async (req, res) => {
+//   try {
+//     const allPartners = await pool.query('SELECT *  FROM  partners LIMIT 5  ');
+//     res.json(allPartners.rows);
+//   } catch (err) {
+//     console.error(err.message);
+//   }
+// });
 
 //get all Partners
 router.get('/:id', async (req, res) => {
